@@ -1,0 +1,302 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f6f7fb;
+    color: #1a1a1a;
+}
+
+/* Top Navigation */
+.top-nav {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.top-nav nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+.top-nav nav a:hover {
+    color: #000;
+}
+
+/* Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 30px;
+    padding: 30px 40px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: #0078ff;
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Grid Metrics */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background: #eef3ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Date Range Dropdown */
+.date-range-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.dropdown-btn:hover {
+    background: #f2f2f2;
+}
+
+.dropdown-menu {
+    display: none; /* you’ll toggle this with JS later */
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #ffffff;
+    padding: 20px;
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+.date-field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-field label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.date-field input {
+    padding: 8px 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.apply-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0078ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.apply-btn:hover {
+    background: #005fcc;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-btn {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    background: #f2f2f2;
+}
+
+.filter-menu {
+    display: none; /* toggle with JS later */
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #ffffff;
+    padding: 20px;
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.filter-option input {
+    cursor: pointer;
+}
+
+.apply-filter-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0078ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.apply-filter-btn:hover {
+    background: #005fcc;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+/* Large Events Block */
+.events-block {
+    min-height: 500px;
+}
+
+/* Placeholder styling */
+.event-list-placeholder {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f6f7fb;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    color: #777;
+}
+
+/* Right Column */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Side Cards */
+.side-card {
+    padding: 20px;
+}
+
+/* Stats List */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+
