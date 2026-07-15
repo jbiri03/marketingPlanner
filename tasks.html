@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <h1>Timeline Planner</h1>
+    </header>
+
+    <div class="layout">
+        <!-- SIDE BAR -->
+        <aside class="sidebar">
+            <nav class="menu">
+                <a href="index.html" class="menu-btn">Dashboard</a>
+                <a href="#" class="menu-btn">Events</a>
+                <a href="#" class="menu-btn">Templates</a>
+                <a href="tasks.html" class="menu-btn">Tasks</a>
+                <a href="#" class="menu-btn">Calendar</a>
+                <a href="#" class="menu-btn">Settings</a>
+            </nav>
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+            <h3>Tasks</h3>
+
+        <!-- SEARCH + FILTERS ROW -->
+        <div class="search-filters">
+            <input type="text" placeholder="Search tasks...">
+
+            <div class="filter-select">
+                <label for="status-filter">Status</label>
+                <select id="status-filter" name="status-filter">
+                    <option value="all-statuses">All statuses</option>
+                    <option value="not-started">Not started</option>
+                    <option value="in-progress">In progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="skipped">Skipped</option>
+                </select>
+            </div>
+
+            <div class="filter-select">
+                <label for="category-filter">Category</label>
+                <select id="category-filter" name="category-filter">
+                    <option value="all">All categories</option>
+                    <option value="branding-graphics">Branding / Graphics</option>
+                    <option value="website-event-page">Website / Event Page</option>
+                    <option value="ticketing">Ticketing</option>
+                    <option value="email-marketing">Email Marketing</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="print-materials">Print Materials</option>
+                    <option value="press-pr">Press / PR</option>
+                    <option value="sponsorship-donors">Sponsorship / Donors</option>
+                    <option value="internal-coordination">Internal Coordination</option>
+                    <option value="day-of-promotion">Day-of Promotion</option>
+                    <option value="post-event-follow-up">Post-event Follow-up</option>
+                </select>
+            </div>
+
+            <div class="filter-select">
+                <label for="event-filter">Event</label>
+                <select id="event-filter" name="event-filter">
+                    <option value="all-events">All events</option>
+                    <option value="">Loading events...</option>
+                </select>
+            </div>
+
+            <div class="filter-select">
+                <label for="priority-filter">Priority</label>
+                <select id="priority-filter" name="priority-filter">
+                    <option value="all-priorities">All priorities</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+        </div>
+
+
+
+            <!-- STATUS BUTTONS -->
+        <div class="status-toolbar">
+            <div class="status-buttons">
+                <button id="btn-upcoming" class="status-btn">Upcoming</button>
+                <button id="btn-overdue" class="status-btn">Overdue</button>
+                <button id="btn-completed" class="status-btn">Completed</button>
+                <button id="btn-archived" class="status-btn">Archived</button>
+            </div>
+
+            <div class="task-actions">
+                <button id="btn-add-task" class="task-btn">Add Task</button>
+            </div>
+        </div>
+
+
+            <!-- TASKS SECTION -->
+        <section id="tasks-section" class="tasks-container">
+            <p class="tasks-placeholder">Tasks will appear here once added or loaded from the database...</p>
+        </section>
+
+
+
+        </main>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+         Marketing Planner
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/calendar.js"></script>
+
+</body>
+</html>
