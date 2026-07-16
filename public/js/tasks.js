@@ -21,14 +21,18 @@ async function loadTasks() {
         <div class="task-info">
           <h4>${task.title}</h4>
 
-          <span class="task-status-badge task-status-${task.status}">
-            ${formatStatus(task.status)}
-          </span>
+          <div class="task-timestamp">
+            Date created: ${formatTimestamp(task.created_at)}
+          </div>
+
+          <div class="task-due-date">
+            Due date: <span style="color: var(--muted); font-weight: 500;">None yet</span>
+          </div>
         </div>
 
-        <div class="task-timestamp">
-          ${formatTimestamp(task.created_at)}
-        </div>
+        <span class="task-status-badge task-status-${task.status}">
+          ${formatStatus(task.status)}
+        </span>
 
       </article>
     `).join('');
