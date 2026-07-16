@@ -1,13 +1,13 @@
 /* GLOBAL THEME */
 :root {
-    --primary: #1a237e;      /* deep indigo drama */
-    --secondary: #1565c0;    /* bold stage blue */
-    --accent: #fbc02d;       /* golden highlight */
-    --background: #e3f2fd;   /* pale blue wash */
+    --primary: #1a237e;      
+    --secondary: #1565c0;    
+    --accent: #fbc02d;       
+    --background: #e3f2fd;   
     --card-bg: #ffffff;
-    --border: #90caf9;       /* soft blue border */
-    --text: #0d47a1;         /* rich blue text */
-    --muted: #546e7a;        /* muted gray-blue */
+    --border: #90caf9;       
+    --text: #0d47a1;         
+    --muted: #546e7a;        
 }
 
 body {
