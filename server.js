@@ -7,6 +7,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use('/scripts', express.static('scripts'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.send('Server is running');

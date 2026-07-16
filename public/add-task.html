@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task form</title>
+</head>
+<body>
+  <form id="task-form" method="POST">
+    <!-- TASK NAME -->
+    <label for="task-name">Task Name:</label><br>
+    <input type="text" id="task-name" name="title" required><br><br>
+
+    <!-- STATUS OPTIONS -->
+    <p>Current Status:</p>
+    <input type="radio" name="status" id="not-started" value="pending" required>
+    <label for="not-started">Not started</label><br>
+
+    <input type="radio" name="status" id="in-progress" value="in_progress">
+    <label for="in-progress">In progress</label><br>
+
+    <input type="radio" name="status" id="completed" value="completed">
+    <label for="completed">Completed</label><br><br>
+
+    <button type="submit" class="submit">Add Task</button>
+  </form>
+
+  <!-- SCRIPTS -->
+  <script src="../scripts/task-form.js"></script>
+</body>
+</html>
