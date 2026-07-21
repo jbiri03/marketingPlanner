@@ -27,11 +27,11 @@ const PORT = process.env.PORT || 3000;
 
 app.post('/tasks', async (req, res) => {
   try {
-    const { title, status } = req.body;
+    const { title, status, category, priority } = req.body;
 
     const [result] = await pool.execute(
-      'INSERT INTO tasks (title, status) VALUES (?, ?)',
-      [title, status || 'pending']
+      'INSERT INTO tasks (title, status, category, priority) VALUES (?, ?, ?, ?)',
+      [title, status || 'pending', category, priority]
     );
 
     res.status(201).json({

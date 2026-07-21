@@ -7,6 +7,9 @@ form.addEventListener('submit', async (event) => {
 
   const title = document.getElementById('task-name').value.trim();
   const status = document.querySelector('input[name="status"]:checked')?.value;
+  const category = document.getElementById('category').value.trim();
+  const priority = document.querySelector('input[name="priority"]:checked')?.value;
+  
 
   try {
     const response = await fetch('/tasks', {
@@ -14,7 +17,7 @@ form.addEventListener('submit', async (event) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ title, status })
+      body: JSON.stringify({ title, status, category, priority})
     });
 
     const data = await response.json();

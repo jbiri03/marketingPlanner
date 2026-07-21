@@ -17,23 +17,27 @@ async function loadTasks() {
 
     tasksSection.innerHTML = tasks.map(task => `
       <article class="task-card">
-
-        <div class="task-info">
-          <h4>${task.title}</h4>
-
-          <div class="task-timestamp">
-            Date created: ${formatTimestamp(task.created_at)}
+        <div class="task-main">
+          <div class="task-info">
+            <h4 class="task-title">${task.title}</h4>
+            <p class="task-meta">
+              ${task.category ? task.category : 'Uncategorized'}
+            </p>
+            <div class="task-timestamp">
+              Date created: ${formatTimestamp(task.created_at)}
+            </div>
           </div>
 
-          <div class="task-due-date">
-            Due date: <span style="color: var(--muted); font-weight: 500;">None yet</span>
+          <div class="task-badges">
+            <span class="task-priority-badge task-priority-${task.priority}">
+              ${formatPriority(task.priority)}
+            </span>
+
+            <span class="task-status-badge task-status-${task.status}">
+              ${formatStatus(task.status)}
+            </span>
           </div>
         </div>
-
-        <span class="task-status-badge task-status-${task.status}">
-          ${formatStatus(task.status)}
-        </span>
-
       </article>
     `).join('');
 
@@ -44,11 +48,11 @@ async function loadTasks() {
 }
 
 function formatStatus(status) {
-  if (status === 'pending') return 'Not started';
-  if (status === 'in_progress') return 'In progress';
-  if (status === 'completed') return 'Completed';
-  if (status === 'skipped') return 'Skipped';
-  return status;
+  if (!status) return 'Unknown';
+
+  return status
+    .replaceAll('_', ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
 }
 
 function formatTimestamp(ts) {
@@ -62,4 +66,11 @@ function formatTimestamp(ts) {
   });
 }
 
+function formatPriority(priority) {
+  if (!priority) return 'None';
+
+  return priority
+    .replaceAll('_', ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
 loadTasks();

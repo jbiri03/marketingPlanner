@@ -38,6 +38,46 @@
       </div>
     </div>
 
+    <!-- CATEGORY OPTIONS -->
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="" disabled selected>Select a category</option>
+        <option value="Branding/graphics">Branding/graphics</option>
+        <option value="Website/event page">Website/event page</option>
+        <option value="Ticketing">Ticketing</option>
+        <option value="Email marketing">Email marketing</option>
+        <option value="Social media">Social media</option>
+        <option value="Print materials">Print materials</option>
+        <option value="Press/PR">Press/PR</option>
+        <option value="Sponsorship/donors">Sponsorship/donors</option>
+        <option value="Internal coordination">Internal coordination</option>
+        <option value="Day-of promotion">Day-of promotion</option>
+        <option value="Post-event follow-up">Post-event follow-up</option>
+      </select>
+    </div>
+
+    <!-- PRIORITY OPTIONS -->
+    <p class="section-label">Priority:</p>
+
+    <div class="radio-group">
+      <div class="radio-option">
+        <input type="radio" name="priority" id="low" value="low" required>
+        <label for="not-started">Low</label>
+      </div>
+
+      <div class="radio-option">
+        <input type="radio" name="priority" id="medium" value="medium" required>
+        <label for="not-started">Medium</label>
+      </div>
+
+      <div class="radio-option">
+        <input type="radio" name="priority" id="high" value="high" required>
+        <label for="not-started">High</label>
+      </div>
+
+    </div>
+
     <!-- SUBMIT BUTTON -->
     <button type="submit" class="submit">Add Task</button>
 
